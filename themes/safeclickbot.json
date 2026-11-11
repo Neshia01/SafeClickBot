@@ -1,0 +1,203 @@
+{
+  "id": "safeclickbot",
+  "name": "SafeClickBot — Chatbot Edukasi Keamanan Digital",
+  "bot_name": "SafeClickBot",
+  "avatar": "🛡️",
+  "color": "#0f766e",
+  "description": "SafeClickBot merupakan chatbot berbasis rule-based yang dirancang untuk memberikan edukasi mengenai keamanan digital. Chatbot ini membantu pengguna memahami berbagai ancaman di internet, mengenali modus kejahatan digital, serta mengetahui langkah sederhana untuk melindungi akun dan data pribadi.",
+  "greeting": "Halo! Selamat datang di SafeClickBot. Ada yang ingin kamu tanyakan seputar keamanan digital?",
+  "suggestions": [
+    "Apa itu phishing?",
+    "Bagaimana cara membuat password yang kuat?",
+    "Apa yang harus dilakukan jika akun diretas?",
+    "Bagaimana cara mengenali link palsu?"
+  ],
+  "fallback": [
+    "Maaf, aku belum memahami pertanyaanmu. Kamu bisa bertanya tentang phishing, password, OTP, malware, atau keamanan transaksi online.",
+    "Pertanyaan tersebut belum termasuk topik yang bisa aku jawab. Coba tanyakan sesuatu seputar keamanan digital, ya."
+  ],
+  "normalization": {
+    "gmn": "bagaimana",
+    "gimana": "bagaimana",
+    "knp": "kenapa",
+    "ga": "tidak",
+    "gak": "tidak",
+    "nggak": "tidak",
+    "ngga": "tidak",
+    "dgn": "dengan",
+    "yg": "yang",
+    "udh": "sudah",
+    "blm": "belum",
+    "makasih": "terima kasih"
+  },
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "Halo",
+        "Hai",
+        "Hello",
+        "Selamat pagi",
+        "Selamat malam"
+      ],
+      "responses": [
+        "Halo! Selamat datang di SafeClickBot. Ada yang ingin kamu tanyakan seputar keamanan digital?",
+        "Hai! Aku SafeClickBot. Aku siap membantu kamu memahami cara menjaga keamanan saat beraktivitas di internet."
+      ]
+    },
+    {
+      "tag": "phishing",
+      "patterns": [
+        "Apa itu phishing?",
+        "Phishing itu apa sih?",
+        "Bagaimana cara kerja phishing?",
+        "Apa yang dimaksud dengan serangan phishing?",
+        "Bagaimana cara mengenali phishing?"
+      ],
+      "responses": [
+        "Phishing adalah upaya penipuan untuk mendapatkan informasi sensitif dengan menyamar sebagai pihak tepercaya. Biasanya dilakukan melalui pesan, email, atau situs palsu.",
+        "Phishing merupakan salah satu bentuk kejahatan digital yang bertujuan memancing korban agar memberikan informasi pribadi, seperti kata sandi atau data akun."
+      ]
+    },
+    {
+      "tag": "link_palsu",
+      "patterns": [
+        "Bagaimana cara mengetahui link palsu?",
+        "Bagaimana cara mengecek tautan mencurigakan?",
+        "Apakah link dari orang asing aman dibuka?",
+        "Bagaimana membedakan link asli dan palsu?",
+        "Apa ciri-ciri URL berbahaya?"
+      ],
+      "responses": [
+        "Periksa alamat situs dengan teliti, terutama ejaan nama domain. Hindari membuka tautan yang tidak dikenal atau meminta informasi sensitif secara tiba-tiba.",
+        "Link mencurigakan biasanya menggunakan alamat yang menyerupai situs resmi atau mengarahkan pengguna ke halaman yang tidak dikenal. Pastikan keaslian situs sebelum memasukkan data."
+      ]
+    },
+    {
+      "tag": "keamanan_otp",
+      "patterns": [
+        "Apa itu kode OTP?",
+        "Bolehkah memberikan kode OTP kepada orang lain?",
+        "Kenapa kode OTP tidak boleh dibagikan?",
+        "Bagaimana jika ada orang meminta kode OTP?",
+        "Apa yang harus dilakukan jika kode OTP diketahui orang lain?"
+      ],
+      "responses": [
+        "OTP adalah kode verifikasi sekali pakai untuk memastikan identitas pengguna. Jangan pernah membagikannya kepada siapa pun, termasuk orang yang mengaku sebagai petugas layanan.",
+        "Jaga kode OTP seperti kata sandi. Jika ada orang meminta kode tersebut, jangan berikan. Jika sudah terlanjur dibagikan, segera amankan akun melalui layanan resminya."
+      ]
+    },
+    {
+      "tag": "password",
+      "patterns": [
+        "Bagaimana cara membuat password yang kuat?",
+        "Apa tips membuat kata sandi yang aman?",
+        "Password yang bagus itu seperti apa?",
+        "Bolehkah menggunakan password yang sama di semua akun?",
+        "Seberapa sering harus mengganti password?"
+      ],
+      "responses": [
+        "Gunakan kata sandi yang panjang dan unik. Hindari memakai nama, tanggal lahir, atau informasi pribadi yang mudah ditebak.",
+        "Sebaiknya gunakan kata sandi berbeda untuk setiap akun. Kamu juga dapat menggunakan pengelola kata sandi untuk membantu menyimpan kata sandi dengan aman."
+      ]
+    },
+    {
+      "tag": "penipuan_online",
+      "patterns": [
+        "Bagaimana cara mengenali penipuan online?",
+        "Apa saja ciri-ciri penipuan di internet?",
+        "Aku mendapat pesan hadiah gratis, apakah itu penipuan?",
+        "Bagaimana jika ada orang meminta transfer uang?",
+        "Apa yang harus dilakukan jika hampir tertipu online?"
+      ],
+      "responses": [
+        "Waspadai tawaran yang terlalu menggiurkan, permintaan transfer mendadak, dan pesan yang mendesakmu bertindak cepat. Periksa identitas pengirim melalui kanal resmi.",
+        "Jangan terburu-buru mengirim uang atau memberikan data pribadi. Simpan bukti percakapan dan transaksi jika menemukan dugaan penipuan, lalu laporkan melalui layanan resmi."
+      ]
+    },
+    {
+      "tag": "malware",
+      "patterns": [
+        "Apa itu malware?",
+        "Apakah malware sama dengan virus komputer?",
+        "Bagaimana perangkat bisa terkena malware?",
+        "Apa tanda HP terkena malware?",
+        "Bagaimana cara mencegah malware?"
+      ],
+      "responses": [
+        "Malware adalah perangkat lunak berbahaya yang dirancang untuk mengganggu perangkat, mencuri informasi, atau melakukan tindakan tanpa izin pengguna. Contohnya virus, trojan, dan ransomware.",
+        "Hindari mengunduh aplikasi dari sumber tidak resmi, jangan membuka lampiran mencurigakan, dan perbarui sistem perangkat secara berkala."
+      ]
+    },
+    {
+      "tag": "akun_diretas",
+      "patterns": [
+        "Apa yang harus dilakukan jika akun diretas?",
+        "Akun saya di-hack, bagaimana cara mengatasinya?",
+        "Bagaimana cara mengembalikan akun yang dibobol?",
+        "Kenapa akun saya tiba-tiba logout sendiri?",
+        "Bagaimana mengamankan akun yang dicurigai diretas?"
+      ],
+      "responses": [
+        "Segera gunakan prosedur pemulihan akun dari situs atau aplikasi resmi. Ganti kata sandi, keluarkan perangkat yang tidak dikenal, dan aktifkan autentikasi dua faktor jika tersedia.",
+        "Jika akunmu dicurigai diretas, jangan gunakan tautan pemulihan dari pesan mencurigakan. Akses layanan resmi secara langsung dan hubungi pusat bantuan jika tidak bisa masuk."
+      ]
+    },
+    {
+      "tag": "data_pribadi",
+      "patterns": [
+        "Apa saja yang termasuk data pribadi?",
+        "Kenapa data pribadi harus dijaga?",
+        "Data apa yang tidak boleh dibagikan di internet?",
+        "Bagaimana cara melindungi data pribadi?",
+        "Apakah aman mengunggah identitas ke media sosial?"
+      ],
+      "responses": [
+        "Data pribadi adalah informasi yang dapat mengidentifikasi seseorang, misalnya nama lengkap, alamat, nomor identitas, dan informasi kontak. Jangan membagikannya sembarangan di internet.",
+        "Batasi informasi pribadi yang kamu unggah, periksa izin aplikasi, dan pastikan situs yang digunakan tepercaya sebelum mengisi data."
+      ]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "Terima kasih",
+        "Makasih",
+        "Thanks",
+        "Oke, terima kasih informasinya",
+        "Makasih sudah membantu"
+      ],
+      "responses": [
+        "Sama-sama! Tetap waspada dan jaga keamanan digitalmu, ya.",
+        "Dengan senang hati! Semoga informasinya bermanfaat. Jangan lupa selalu berhati-hati saat beraktivitas di internet."
+      ]
+    },
+    {
+      "tag": "transaksi_aman",
+      "patterns": [
+        "Bagaimana cara belanja online dengan aman?",
+        "Apa tips aman saat transfer uang online?",
+        "Apa yang harus diperiksa sebelum membayar belanjaan?",
+        "Bagaimana memastikan toko online terpercaya?",
+        "Bagaimana agar tidak tertipu saat belanja online?"
+      ],
+      "responses": [
+        "Pastikan toko memiliki identitas dan ulasan yang masuk akal. Gunakan metode pembayaran melalui platform resmi dan hindari transfer langsung ke rekening yang tidak jelas.",
+        "Sebelum membayar, periksa alamat toko, detail produk, dan metode pembayaran. Jangan mudah percaya pada harga yang terlalu murah atau tekanan untuk segera membayar."
+      ]
+    },
+    {
+      "tag": "wifi_publik",
+      "patterns": [
+        "Apakah Wi-Fi publik aman digunakan?",
+        "Apa bahaya menggunakan Wi-Fi gratis?",
+        "Bolehkah login akun lewat Wi-Fi umum?",
+        "Bagaimana cara aman memakai Wi-Fi publik?",
+        "Apa risiko menggunakan Wi-Fi di tempat umum?"
+      ],
+      "responses": [
+        "Wi-Fi publik dapat memiliki risiko keamanan, terutama jika jaringan tidak terlindungi atau palsu. Hindari mengakses informasi sensitif dan melakukan transaksi penting melalui jaringan yang tidak tepercaya.",
+        "Pastikan nama jaringan Wi-Fi benar sebelum terhubung. Matikan fitur koneksi otomatis dan gunakan koneksi seluler untuk aktivitas yang membutuhkan keamanan lebih tinggi."
+      ]
+    }
+  ]
+}

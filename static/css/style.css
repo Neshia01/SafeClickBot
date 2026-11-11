@@ -1,0 +1,498 @@
+
+/* ================================================================
+   Gaya tampilan Chatbot Tematik
+   Warna utama (--primary) dikirim dari tema lewat atribut style <body>
+   ================================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  background: #f1f5f9;
+  color: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Navbar ---------- */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--primary);
+  color: #fff;
+}
+
+.brand {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.footer {
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ---------- Halaman pilih tema ---------- */
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #475569;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.theme-card {
+  display: block;
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  border-top: 6px solid var(--card);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+  transition: transform .15s;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+}
+
+.theme-avatar {
+  font-size: 44px;
+}
+
+.theme-card h2 {
+  font-size: 21px;
+  margin: 10px 0;
+  color: var(--card);
+}
+
+.theme-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.theme-meta {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ---------- Halaman chat ---------- */
+
+.chat-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 160px);
+  min-height: 480px;
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chat-header h1 {
+  font-size: 22px;
+  margin: 0;
+  color: var(--primary);
+}
+
+.chat-header p {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.avatar {
+  font-size: 38px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.msg {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  max-width: 85%;
+}
+
+.msg-user {
+  align-self: flex-end;
+}
+
+.msg-bot {
+  align-self: flex-start;
+}
+
+.msg-avatar {
+  font-size: 26px;
+}
+
+.bubble {
+  padding: 13px 17px;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.msg-user .bubble {
+  background: var(--primary);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.msg-bot .bubble {
+  background: #f1f5f9;
+  border-bottom-left-radius: 4px;
+}
+
+.meta {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ---------- Tombol saran ---------- */
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px 12px;
+}
+
+.chip {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ---------- Form chat ---------- */
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 13px 17px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  font-size: 16px;
+}
+
+.chat-form input:focus {
+  outline: 2px solid var(--primary);
+  border-color: transparent;
+}
+
+.chat-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .6);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ---------- Header chat & mode belajar ---------- */
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+a.btn-ghost {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.chat-title {
+  flex: 1;
+}
+
+.learn-toggle {
+  font-size: 15px;
+  color: #475569;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.candidates {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* ---------- Halaman admin ---------- */
+
+.admin {
+  background: #fff;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.admin h1 {
+  color: var(--primary);
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.admin h2 {
+  font-size: 21px;
+  margin-top: 28px;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.stat {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background: #f8fafc;
+}
+
+.bar {
+  background: #e2e8f0;
+  border-radius: 999px;
+  height: 10px;
+  min-width: 120px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+/* ---------- Tampilan HP ---------- */
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 16px 12px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .theme-card h2 {
+    font-size: 19px;
+  }
+
+  .theme-card p {
+    font-size: 15px;
+  }
+
+  .chat-header {
+    padding: 13px;
+    gap: 10px;
+  }
+
+  .chat-header h1 {
+    font-size: 19px;
+  }
+
+  .chat-header p {
+    font-size: 14px;
+  }
+
+  .avatar {
+    font-size: 32px;
+  }
+
+  .messages {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .msg {
+    max-width: 92%;
+  }
+
+  .bubble {
+    font-size: 15px;
+    padding: 11px 14px;
+  }
+
+  .suggestions {
+    padding: 0 14px 10px;
+  }
+
+  .chip {
+    font-size: 14px;
+    padding: 7px 12px;
+  }
+
+  .chat-form {
+    padding: 12px;
+    gap: 7px;
+  }
+
+  .chat-form input {
+    font-size: 15px;
+    padding: 11px 14px;
+  }
+
+  .chat-form button {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  .btn-ghost,
+  a.btn-ghost {
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+
+  .learn-toggle {
+    font-size: 13px;
+  }
+
+  .chat-card {
+    height: calc(100vh - 130px);
+  }
+
+  .admin {
+    padding: 18px;
+  }
+
+  .admin h1 {
+    font-size: 24px;
+  }
+
+  .admin h2 {
+    font-size: 19px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+}
